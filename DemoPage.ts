@@ -28,3 +28,5 @@ run().catch(err => {
     console.error('Script failed:', err);
     process.exit(1);
 });
+
+// This script uses Playwright to automate a browser, navigate to Wikipedia, search for "TypeScript", and extract the article title and first paragraph. It also saves a screenshot of the article page.git
