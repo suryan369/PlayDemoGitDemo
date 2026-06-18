@@ -1,4 +1,4 @@
-import { test, expect } from '../fixtures/fixtures';
+import { test, expect } from './fixtures/fixtures';
 
 test('search TypeScript on Wikipedia', async ({ homePage, articlePage }) => {
     await homePage.goto('https://en.wikipedia.org/');
