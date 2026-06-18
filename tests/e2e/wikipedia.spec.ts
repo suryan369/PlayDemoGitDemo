@@ -13,3 +13,4 @@ test('search TypeScript on Wikipedia', async ({ homePage, articlePage }) => {
 
     await articlePage.screenshot('tests-output/wikipedia-typescript.png');
 });
+//small changes
