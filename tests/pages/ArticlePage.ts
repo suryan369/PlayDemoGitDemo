@@ -3,7 +3,7 @@ import { BasePage } from './BasePage';
 
 export class ArticlePage extends BasePage {
     readonly heading = '#firstHeading';
-    readonly firstParagraph = 'p';
+    readonly firstParagraph = '#mw-content-text .mw-parser-output > p:not(.mw-empty-elt)';
 
     constructor(page: Page) {
         super(page);
@@ -14,6 +14,7 @@ export class ArticlePage extends BasePage {
     }
 
     async getFirstParagraph() {
+        await this.page.waitForSelector(this.firstParagraph, { state: 'visible' });
         return (await this.page.textContent(this.firstParagraph)) || '';
     }
 }
